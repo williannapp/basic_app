@@ -1,11 +1,15 @@
-apiVersion: 
+apiVersion: v1
 kind: Service
 metadata:
   name: java-app-service
 spec:
-  type: NodePort
-  ports:
-    - port: 8080
   selector:
     app: {{ .Chart.Name }}
+  type: NodePort
+
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8008
+      targetPort: http
 

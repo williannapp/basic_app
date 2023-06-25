@@ -16,7 +16,7 @@ spec:
         release: {{ .Release.Name }}
     spec:
       containers:
-      - name: basic-java-application
+      - name: {{ .Chart.Name }}
         image: willipp/java-application:1.0.0
         imagePullPolicy: Never
         ports:

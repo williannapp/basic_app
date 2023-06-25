@@ -1,0 +1,3 @@
+applications:
+- name: java-app
+  path: charts/java-app
